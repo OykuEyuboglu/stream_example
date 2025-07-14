@@ -40,10 +40,7 @@ class _HomeViewState extends State<HomeView> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            const Text(
-              'Gelen Sayı:',
-              style: TextStyle(fontSize: 24),
-            ),
+            const Text('Gelen Sayı:', style: TextStyle(fontSize: 24)),
             const SizedBox(height: 16),
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
@@ -52,8 +49,7 @@ class _HomeViewState extends State<HomeView> {
               child: Text(
                 _currentNumber?.toString() ?? '',
                 key: ValueKey<int?>(_currentNumber),
-                style:
-                    const TextStyle(fontSize: 64, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 64, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 40),
