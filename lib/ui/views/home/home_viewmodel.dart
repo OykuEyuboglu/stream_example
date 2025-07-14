@@ -1,10 +1,14 @@
 import 'dart:async';
+import 'package:stacked/stacked.dart';
+
 import '../../../services/api_service.dart';
 
-class HomeViewModel {
+class HomeViewModel extends FutureViewModel {
   final ApiService _apiService = ApiService();
   final StreamController<int> _controller = StreamController<int>.broadcast();
   final List<int> _lastFiveNumbers = [];
+
+  int get currentNumber => _lastFiveNumbers.isEmpty ? 0 : _lastFiveNumbers.first;
 
   Stream<int> get randomNumberStream => _controller.stream;
   List<int> get lastFiveNumbers => List.unmodifiable(_lastFiveNumbers);
@@ -17,10 +21,19 @@ class HomeViewModel {
       if (_lastFiveNumbers.length > 5) {
         _lastFiveNumbers.removeLast();
       }
+
+      rebuildUi();
     });
   }
 
+  @override
   void dispose() {
+    super.dispose();
     _controller.close();
+  }
+
+  @override
+  Future futureToRun() async {
+    startStreaming();
   }
 }
