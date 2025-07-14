@@ -1,13 +1,29 @@
 # stream_exp
 
-A new Flutter project.
+A Flutter application that demonstrates real-time random number streaming using Flutter and Node.js.
 
-## Golden Tests
+## ✨ Features
 
-Golden tests are already setup for this project. To run the tests and update the golden files, run:
+- Real-time random numbers are streamed from a Node.js backend every second
+- Live updates are displayed on the Flutter frontend with animation
+- The last 5 received numbers are also shown as history on the screen
 
-```bash
-flutter test --update-goldens
-```
+## 🛠 Requirements
 
-The golden test screenshots will be stored under `test/golden/`.
+To run this project, you need to have the following installed on your system.
+
+- Flutter SDK
+- Dart SDK
+- Node.js
+
+- A device or emulator to run the Flutter app (e.g., Chrome, Android emulator)
+
+## 📦 Installation
+
+- Clone the repository
+- Install Flutter dependencies
+- Install backend dependencies (node.js)
+
+## ▶️ Running the App
+
+Start the node.js server and then run the flutter app.
