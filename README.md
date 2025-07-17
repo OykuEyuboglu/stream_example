@@ -12,9 +12,9 @@ A Flutter application that demonstrates real-time random number streaming using 
 
 To run this project, you need to have the following installed on your system.
 
-- Flutter SDK
+- Flutter SDK (version 3.10.0 or later recommended)
 - Dart SDK
-- Node.js
+- Node.js (v18 or later)
 
 - A device or emulator to run the Flutter app (e.g., Chrome, Android emulator)
 
